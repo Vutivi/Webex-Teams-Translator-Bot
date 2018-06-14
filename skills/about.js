@@ -9,16 +9,16 @@ module.exports = function (controller, bot) {
     var botcommons = {
 
         // Bot description
-        "description": "It's an awesome bot for sure!",
+        "description": "World Translator bot",
 
         // Where to get more information about the bot
-        "url": "https://github.com/CiscoDevNet/botkit-template",
+        "url": "https://github.com/Vutivi/botkit-template.git",
 
         // Legal owner
-        "legal_owner": "Cisco DevNet <https://developer.cisco.com>",
+        "legal_owner": "Assento <https://assento.co.za>",
 
         // Contact name for support
-        "support_contact": "Stève Sfartz <mailto:stsfartz@cisco.com>",
+        "support_contact": "Vutivi Shivambu <mailto:vutivi.shivambu@assento.co.za>",
 
         // Messaging platform
         // [WORKAROUND] overriding Botkit's integrated support temporarly as 'ciscospark' is still returned

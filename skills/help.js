@@ -7,7 +7,8 @@ module.exports = function (controller) {
         var text = "Here are my skills:";
         text += "\n- " + bot.appendMention(message, "to-language") + ": Translates the text(detects language) after the command to the language specified. E.g @translator to-afrikaans I love using Webex Teams.";
         text += "\n\nI also understand:";
-        text += "\n- " + bot.appendMention(message, "help") + ": spreads the word about my skills";
+        text += "\n- " + bot.appendMention(message, "help") + ": spreads the word about my skills.";
+	text += "\n- " + bot.appendMention(message, "about") + ": Describes the bot.";
         bot.reply(message, text);
     });
 }
