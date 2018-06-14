@@ -12,7 +12,7 @@ module.exports = function (controller) {
 			var target=message.text.match("(to-)(\\w+)")[2];
 			bot.startConversation(message, function (err, convo) {
 				//call the google translate API to translate the message only
-				translate(command.message.text.split(target)[1], {to: languageCodeDict[target]}).then(res => {
+				translate(message.text.split(target)[1], {to: languageCodeDict[target]}).then(res => {
 					convo.say("This message is for you:"+res.text);
 				}).catch(err => {
 				console.error(err);
