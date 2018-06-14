@@ -8,12 +8,10 @@ var languageCodeDict={"afrikaans":"af","albanian":"sq","amharic":"am","arabic":"
 module.exports = function (controller) {
 	for(var key in languageCodeDict){
 		controller.hears(["to-"+key], 'direct_message,direct_mention', function (bot, message) {
-
+			var target=command.message.text.match("(to-)(\\w+)")[2];
 			bot.startConversation(message, function (err, convo) {
-				
-
 				//call the google translate API to translate the message only
-				translate(message.text, {to: languageCodeDict[key]}).then(res => {
+				translate(command.message.text.split(target)[1], {to: languageCodeDict[target]}).then(res => {
 					convo.say("This message is for you:"+res.text);
 				}).catch(err => {
 				console.error(err);
