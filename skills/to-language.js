@@ -10,7 +10,7 @@ module.exports = function (controller) {
     controller.hears([/^color$/], 'direct_message,direct_mention', function (bot, message) {
 
         bot.startConversation(message, function (err, convo) {
-            convo.say(message);
+            convo.say("This message is for you:"+message);
 
             convo.ask('What is your favorite color?', function (response, convo) {
                 convo.say("Cool, I like '" + response.text + "' too!");
