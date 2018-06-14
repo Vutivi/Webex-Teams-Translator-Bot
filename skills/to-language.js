@@ -7,7 +7,7 @@ var languageCodeDict={"afrikaans":"af","albanian":"sq","amharic":"am","arabic":"
 
 module.exports = function (controller) {
 	for(var key in languageCodeDict){
-    controller.hears('to-'+key, 'direct_message,direct_mention', function (bot, message) {
+    controller.hears("to-"+key, 'direct_message,direct_mention', function (bot, message) {
 		
         bot.startConversation(message, function (err, convo) {
             convo.say(message);
