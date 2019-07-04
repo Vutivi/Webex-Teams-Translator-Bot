@@ -6,7 +6,7 @@ World Translator is free to use for anyone, forever.
 
 Get started using the following commands: 
 
-*search @translator from your webex teams room and add it
+search @translator from your webex teams room and add it
 
 * @translator to-language: Translates the text(detects language) after the command to the language specified. E.g @translator to-afrikaans I love using Webex Teams. 
 
